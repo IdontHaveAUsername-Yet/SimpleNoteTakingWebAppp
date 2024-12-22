@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notiz-App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>My Notes</h1>
+        
+        <!-- Light/Dark Mode Button -->
+        <button id="theme-toggle">🌞 Dark Mode</button>
+        
+        <form action="/add" method="post" class="note-form">
+            <input type="text" name="note" placeholder="Neue Notiz hinzufügen" required>
+            <button type="submit">Hinzufügen</button>
+        </form>
+        <ul id="note-list">
+           
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
